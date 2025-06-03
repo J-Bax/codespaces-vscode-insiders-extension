@@ -1,0 +1,14 @@
+{
+  "manifest_version": 3,
+  "name": "GitHub Codespaces – Open in VS Code Insiders",
+  "description": "Adds an 'Open in Visual Studio Code – Insiders' option to the Codespaces site.",
+  "version": "0.0.1",
+  "content_scripts": [
+    {
+      "matches": ["https://github.com/codespaces*", "https://github.com/*/codespaces/*"],
+      "js": ["src/content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "host_permissions": ["https://github.com/*"]
+}
